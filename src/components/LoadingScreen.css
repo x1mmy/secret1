@@ -1,0 +1,53 @@
+.loading-screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #2d0a14 0%, #0a0000 100%);
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-heart {
+  font-size: 100px;
+  margin-bottom: 30px;
+}
+
+.loading-text {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  color: #d4af37;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
+}
+
+.loading-sparkles {
+  font-size: 30px;
+  animation: sparkle-move 2s ease-in-out infinite;
+}
+
+@keyframes sparkle-move {
+  0%, 100% {
+    letter-spacing: 10px;
+  }
+  50% {
+    letter-spacing: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-heart {
+    font-size: 70px;
+  }
+
+  .loading-text {
+    font-size: 18px;
+  }
+
+  .loading-sparkles {
+    font-size: 24px;
+  }
+}
