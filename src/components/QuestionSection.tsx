@@ -60,7 +60,13 @@ const QuestionSection = ({ onYesClick }: QuestionSectionProps) => {
     // Shake animation for No button
     if (noButtonRef.current) {
       gsap.to(noButtonRef.current, {
-        x: [-10, 10, -10, 10, 0],
+        keyframes: [
+          { x: -10 },
+          { x: 10 },
+          { x: -10 },
+          { x: 10 },
+          { x: 0 }
+        ],
         duration: 0.5,
         ease: 'power2.inOut'
       })
